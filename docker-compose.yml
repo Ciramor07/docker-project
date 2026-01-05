@@ -1,0 +1,30 @@
+services:
+  webapp_student_list:
+    image: php:apache
+    container_name: webapp_student_list
+    depends_on:
+      - api
+    ports:
+       - "8080:80"  # map port interne 80 -> host 8080
+    volumes:
+        - ./website/:/var/www/html
+    environment:
+        - USERNAME=toto
+        - PASSWORD=python
+    networks:
+      - pozos_network
+
+  api:
+    image: api:v1.0
+    container_name: api
+    ports:
+       - "5000:5000"  # map port interne 5000 -> host 5000
+    volumes:
+      - './simple_api/:/data/'
+    networks:
+      - pozos_network
+
+networks:
+  pozos_network:
+    name: pozos_network
+    driver: bridge
