@@ -1,0 +1,14 @@
+# Docker
+**/node_modules
+**/__pycache__
+*.log
+
+# Registry data (CRITIQUE)
+opt/docker/registry
+registry/data
+
+# OS / IDE
+.vscode
+.idea
+.DS_Store
+Thumbs.db
