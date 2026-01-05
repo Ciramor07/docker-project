@@ -179,7 +179,7 @@ curl -u pozos:pozos http://localhost:5000/v2/_catalog
 
 ## 👤 Author
 
-DevOps & Cloud Engineer (Junior)
+Ditine & Easytraining 
 
 ---
 
